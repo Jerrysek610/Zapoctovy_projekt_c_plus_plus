@@ -1,0 +1,339 @@
+.TH "Building" 3 "ne 28. kvě 2017" "Version 1.0.0.1" "Reservation system" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Building \- Trida reprezentujici akci\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Building\&.h>\fP
+.SS "Veřejné metody"
+
+.in +1c
+.ti -1c
+.RI "\fBBuilding\fP (size_t size, int cena, std::string \fBname\fP)"
+.br
+.ti -1c
+.RI "size_t \fBGetSize\fP () const"
+.br
+.ti -1c
+.RI "bool \fBResize\fP (size_t size, int cena)"
+.br
+.ti -1c
+.RI "bool \fBInsert_Row\fP (size_t position, size_t size, int costS)"
+.br
+.ti -1c
+.RI "bool \fBInsert_Column\fP (size_t position, size_t size, int costS)"
+.br
+.ti -1c
+.RI "bool \fBRemove_Row\fP (size_t position, size_t size)"
+.br
+.ti -1c
+.RI "bool \fBRemove_Column\fP (size_t position, size_t size)"
+.br
+.ti -1c
+.RI "bool \fBAlter_Reservation\fP (std::vector< size_t > &seats, std::vector< int > &cost, \fBname\fP person, std::string password)"
+.br
+.ti -1c
+.RI "bool \fBAdd_Reservation\fP (std::vector< size_t > &seats, std::vector< int > &cost, \fBname\fP person, std::string password)"
+.br
+.ti -1c
+.RI "bool \fBRemove_Reservation\fP (\fBname\fP person, std::string password)"
+.br
+.ti -1c
+.RI "\fBReservation\fP * \fBFind_Reservation\fP (\fBname\fP person)"
+.br
+.ti -1c
+.RI "int \fBGet_Cost\fP (size_t seat)"
+.br
+.ti -1c
+.RI "std::vector< bool > & \fBGet_Seats\fP ()"
+.br
+.ti -1c
+.RI "std::vector< int > & \fBGet_Costs\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBGet_Array_Position\fP (\fBcoordinates\fP position)"
+.br
+.ti -1c
+.RI "std::string \fBto_string\fP ()"
+.br
+.in -1c
+.SH "Detailní popis"
+.PP 
+Trida reprezentujici akci\&. 
+.PP
+Definice je uvedena na řádku 12 v souboru Building\&.h\&.
+.SH "Dokumentace konstruktoru a destruktoru"
+.PP 
+.SS "Building::Building (size_t size, int cena, std::string name)\fC [inline]\fP"
+Konstruktor, ktery nam zalozi akci o maximalni velikosti size a priradi ji jmeno Name 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIsize\fP Maximalni pocet mist na akci 
+.br
+\fIcena\fP Celkova cena za akci 
+.br
+\fIname\fP Jmeno akce 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 19 v souboru Building\&.h\&.
+.SH "Dokumentace k metodám"
+.PP 
+.SS "bool Building::Add_Reservation (std::vector< size_t > & seats, std::vector< int > & cost, \fBname\fP person, std::string password)\fC [inline]\fP"
+Vlozi rezervaci na konkretni mista pro konkretni osobu\&. Pokud je nektere z mist zabrane, vratime false\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIseats\fP Cisla sedadel, ktere vkladame 
+.br
+\fIcost\fP Cena sedadel, ktere vkladame 
+.br
+\fIperson\fP Osoba slouzici jako klic k vyhledavani rezervaci 
+.br
+\fIpassword\fP Heslo potrebne k uprave rezervace 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Zdali se povedla operace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 368 v souboru Building\&.h\&.
+.SS "bool Building::Alter_Reservation (std::vector< size_t > & seats, std::vector< int > & cost, \fBname\fP person, std::string password)\fC [inline]\fP"
+Provede editaci rezervace - udaje se nahradi novymi, pokud se shoduji hesla a prepise take obsazenost mist 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIseats\fP Cisla sedadel, ktere vkladame 
+.br
+\fIcost\fP Cena sedadel, ktere vkladame 
+.br
+\fIperson\fP Osoba slouzici jako klic k vyhledavani rezervaci 
+.br
+\fIpassword\fP Heslo potrebne ke zmene rezervace 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Zdali se povedla operace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 338 v souboru Building\&.h\&.
+.SS "\fBReservation\fP* Building::Find_Reservation (\fBname\fP person)\fC [inline]\fP"
+Vrati nam odkaz na rezervaci osoby person a nebo null 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIperson\fP Osoba, jejiz rezervaci chceme najit 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Pozadovanou rezervaci nebo null 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 410 v souboru Building\&.h\&.
+.SS "size_t Building::Get_Array_Position (\fBcoordinates\fP position)\fC [inline]\fP"
+Vrati nam pozici v poli ze souradnic position\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIposition\fP Souradnice, u kterych chceme dostat cislo sedadla 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Cislo sedadla 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 441 v souboru Building\&.h\&.
+.SS "int Building::Get_Cost (size_t seat)\fC [inline]\fP"
+Vrati nam cenu vybraneho sedadla\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIseat\fP Cislo sedadla 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Cena sedadla 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 421 v souboru Building\&.h\&.
+.SS "std::vector<int>& Building::Get_Costs ()\fC [inline]\fP"
+Vrati cenu sedadel 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Cena sesdadel 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 433 v souboru Building\&.h\&.
+.SS "std::vector<bool>& Building::Get_Seats ()\fC [inline]\fP"
+Vrati obsazenost sedadel 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Obsazenost sedadel ve forme LinkedList, true==obsazeno 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 427 v souboru Building\&.h\&.
+.SS "size_t Building::GetSize () const\fC [inline]\fP"
+Vrati maximalni velikost 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Velikost 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 25 v souboru Building\&.h\&.
+.SS "bool Building::Insert_Column (size_t position, size_t size, int costS)\fC [inline]\fP"
+Vlozi sloupec sedadel za position-ty sloupec (pokud position==0, vkladame na zacatek), pokud je radek kratsi nez position, vratime false\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIposition\fP Pozice, za kterou vkladame 
+.br
+\fIsize\fP Pocet vkladanych pozic 
+.br
+\fIcostS\fP Cena vkladanych sedadel\&. 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Zdali se povedla operace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 113 v souboru Building\&.h\&.
+.SS "bool Building::Insert_Row (size_t position, size_t size, int costS)\fC [inline]\fP"
+Vlozi radek sedadel za position-ty radek velikosti size (pokud position==0, vkladame na zacatek), pokud nastane chyba, vracime false 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIposition\fP Pozice, za kterou vkladame 
+.br
+\fIsize\fP Pocet vkladanych pozic 
+.br
+\fIcostS\fP Cena vkladanych sedadel\&. 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Zdali se povedla operace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 47 v souboru Building\&.h\&.
+.SS "bool Building::Remove_Column (size_t position, size_t size)\fC [inline]\fP"
+Odebere cely position-ty sloupec sedadel a upravi podle toho rezervace, pokud radek neexistuje, vratime false\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIposition\fP Pozice, kde mazeme 
+.br
+\fIsize\fP Pocet mazanych pozic 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Zdali se povedla operace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 257 v souboru Building\&.h\&.
+.SS "bool Building::Remove_Reservation (\fBname\fP person, std::string password)\fC [inline]\fP"
+Zrusi rezervaci osoby person, pokud osoba nema rezervaci, vratime false\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIperson\fP Osoba slouzici jako klic k vyhledani 
+.br
+\fIpassword\fP Heslo potrebne ke smazani rezervace 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Zdali se povedla operace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 392 v souboru Building\&.h\&.
+.SS "bool Building::Remove_Row (size_t position, size_t size)\fC [inline]\fP"
+Odebere position-ty radek sedadel a upravi podle toho rezervace, pokud radek neexistuje, vratime false\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIposition\fP Pozice, kde mazeme 
+.br
+\fIsize\fP Pocet mazanych pozic 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Zdali se povedla operace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 181 v souboru Building\&.h\&.
+.SS "bool Building::Resize (size_t size, int cena)\fC [inline]\fP"
+Provede zmenu poctu mist na akci\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIcena\fP Celkova cena za akci 
+.br
+\fIsize\fP Maximalni pocet mist na akci 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Zdali se povedla operace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 34 v souboru Building\&.h\&.
+.SS "std::string Building::to_string ()\fC [inline]\fP"
+Provede vypis parametru akce 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Vypis v podobe String 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 455 v souboru Building\&.h\&.
+
+.SH "Autor"
+.PP 
+Generováno automaticky programem Doxygen ze zdrojových textů projektu Reservation system\&.

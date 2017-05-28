@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reservation system: Zdrojový soubor Reservation_system/IO_System.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Reservation system
+   &#160;<span id="projectnumber">1.0.0.1</span>
+   </div>
+   <div id="projectbrief">Managing of actions and their reservations</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generováno programem Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Hledat');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_i_o___system_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">IO_System.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Building.h&quot;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Exceptions.h&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;windows.h&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;SeatSync.h&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;ReservationSync.h&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_i_o___system.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_o___system.html">IO_System</a></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_i_o___system.html#ab513f5cfc29927684f6ecca5bf043040">   20</a></span>&#160;    <span class="keyword">explicit</span> <span class="keyword">inline</span> <a class="code" href="class_i_o___system.html#ab513f5cfc29927684f6ecca5bf043040">IO_System</a>(std::string filename, <span class="keywordtype">size_t</span> n=5): filename(filename), serialize(n)</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">auto</span> ftyp = GetFileAttributesA(<span class="stringliteral">&quot;workingDIR&quot;</span>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//spatna cesta</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (ftyp == INVALID_FILE_ATTRIBUTES)</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classbad__path.html">bad_path</a>();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">//neexistuje slozka</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (!(ftyp &amp; FILE_ATTRIBUTE_DIRECTORY))</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classnot__dir.html">not_dir</a>();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//vytvorene soubore - / je univerzalne cesta</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        reservations = std::fstream(<span class="stringliteral">&quot;workingDIR/&quot;</span> + filename + <span class="stringliteral">&quot;_reservations.dmp&quot;</span>, std::ios_base::out|std::ios_base::app);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        tmp = std::fstream(<span class="stringliteral">&quot;workingDIR/&quot;</span>+filename+<span class="stringliteral">&quot;.data&quot;</span>, std::ios_base::out|std::ios_base::app);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        seats = std::fstream(<span class="stringliteral">&quot;workingDIR/&quot;</span> + filename + <span class="stringliteral">&quot;_seats.dmp&quot;</span>, std::ios_base::out | std::ios_base::app);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        reservations.close();</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        tmp.close();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        seats.close();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_i_o___system.html#a77ab66bfaa4600c5998fea2ee54b7970">Write</a>(<span class="keywordtype">bool</span> command);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_i_o___system.html#acd26a47d5656a08695347d4abaa8e599">Read</a>(<a class="code" href="class_building.html">Building</a>&amp; action, std::string filename);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_i_o___system.html#a0d2435d9d795a90b24e3c441fcead458">SerializeIO</a>(std::vector&lt;SeatSync&gt;&amp; seat, std::vector&lt;ReservationSync&gt;&amp; reservation);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_i_o___system.html#a64424b244ed061168d46530bd4adb9ff">   62</a></span>&#160;    <span class="keyword">inline</span> std::vector&lt;ReservationSync&gt;&amp; <a class="code" href="class_i_o___system.html#a64424b244ed061168d46530bd4adb9ff">GetNonSyncReservations</a>()</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> reservation;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div><div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_i_o___system.html#a7a3227f5af85a44e06ad417f2bf52247">   68</a></span>&#160;    <span class="keyword">inline</span> std::vector&lt;SeatSync&gt;&amp; <a class="code" href="class_i_o___system.html#a7a3227f5af85a44e06ad417f2bf52247">GetNonSyncSeats</a>()</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> seat;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::string filename;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::vector&lt;ReservationSync&gt; reservation;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::vector&lt;SeatSync&gt; seat;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">size_t</span> serialize;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::fstream seats;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    std::fstream reservations;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    std::fstream tmp;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div><div class="ttc" id="classbad__path_html"><div class="ttname"><a href="classbad__path.html">bad_path</a></div><div class="ttdoc">Vyjimka, rikajici, ze byla zadana nespravna cesta. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8h_source.html#l00005">Exceptions.h:5</a></div></div>
+<div class="ttc" id="class_i_o___system_html"><div class="ttname"><a href="class_i_o___system.html">IO_System</a></div><div class="ttdoc">Trida, zabyvajici se serializaci jedne akce. </div><div class="ttdef"><b>Definition:</b> <a href="_i_o___system_8h_source.html#l00011">IO_System.h:11</a></div></div>
+<div class="ttc" id="class_i_o___system_html_a77ab66bfaa4600c5998fea2ee54b7970"><div class="ttname"><a href="class_i_o___system.html#a77ab66bfaa4600c5998fea2ee54b7970">IO_System::Write</a></div><div class="ttdeci">bool Write(bool command)</div><div class="ttdef"><b>Definition:</b> <a href="_i_o___system_8cpp_source.html#l00128">IO_System.cpp:128</a></div></div>
+<div class="ttc" id="class_i_o___system_html_a64424b244ed061168d46530bd4adb9ff"><div class="ttname"><a href="class_i_o___system.html#a64424b244ed061168d46530bd4adb9ff">IO_System::GetNonSyncReservations</a></div><div class="ttdeci">std::vector&lt; ReservationSync &gt; &amp; GetNonSyncReservations()</div><div class="ttdef"><b>Definition:</b> <a href="_i_o___system_8h_source.html#l00062">IO_System.h:62</a></div></div>
+<div class="ttc" id="class_i_o___system_html_acd26a47d5656a08695347d4abaa8e599"><div class="ttname"><a href="class_i_o___system.html#acd26a47d5656a08695347d4abaa8e599">IO_System::Read</a></div><div class="ttdeci">bool Read(Building &amp;action, std::string filename)</div><div class="ttdef"><b>Definition:</b> <a href="_i_o___system_8cpp_source.html#l00425">IO_System.cpp:425</a></div></div>
+<div class="ttc" id="class_i_o___system_html_a7a3227f5af85a44e06ad417f2bf52247"><div class="ttname"><a href="class_i_o___system.html#a7a3227f5af85a44e06ad417f2bf52247">IO_System::GetNonSyncSeats</a></div><div class="ttdeci">std::vector&lt; SeatSync &gt; &amp; GetNonSyncSeats()</div><div class="ttdef"><b>Definition:</b> <a href="_i_o___system_8h_source.html#l00068">IO_System.h:68</a></div></div>
+<div class="ttc" id="class_i_o___system_html_ab513f5cfc29927684f6ecca5bf043040"><div class="ttname"><a href="class_i_o___system.html#ab513f5cfc29927684f6ecca5bf043040">IO_System::IO_System</a></div><div class="ttdeci">IO_System(std::string filename, size_t n=5)</div><div class="ttdef"><b>Definition:</b> <a href="_i_o___system_8h_source.html#l00020">IO_System.h:20</a></div></div>
+<div class="ttc" id="class_building_html"><div class="ttname"><a href="class_building.html">Building</a></div><div class="ttdoc">Trida reprezentujici akci. </div><div class="ttdef"><b>Definition:</b> <a href="_building_8h_source.html#l00012">Building.h:12</a></div></div>
+<div class="ttc" id="class_i_o___system_html_a0d2435d9d795a90b24e3c441fcead458"><div class="ttname"><a href="class_i_o___system.html#a0d2435d9d795a90b24e3c441fcead458">IO_System::SerializeIO</a></div><div class="ttdeci">void SerializeIO(std::vector&lt; SeatSync &gt; &amp;seat, std::vector&lt; ReservationSync &gt; &amp;reservation)</div><div class="ttdef"><b>Definition:</b> <a href="_i_o___system_8cpp_source.html#l00649">IO_System.cpp:649</a></div></div>
+<div class="ttc" id="classnot__dir_html"><div class="ttname"><a href="classnot__dir.html">not_dir</a></div><div class="ttdoc">Vyjimka, rikajici, ze neexistuje slozka. </div><div class="ttdef"><b>Definition:</b> <a href="_exceptions_8h_source.html#l00014">Exceptions.h:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_7536135a5dd2e715bc0ba30af6684bde.html">Reservation_system</a></li><li class="navelem"><b>IO_System.h</b></li>
+    <li class="footer">Generováno programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

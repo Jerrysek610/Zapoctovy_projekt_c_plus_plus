@@ -1,0 +1,137 @@
+.TH "Reservation" 3 "ne 28. kvě 2017" "Version 1.0.0.1" "Reservation system" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Reservation \- Trida reprezentujici rezervaci\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Reservation\&.h>\fP
+.SS "Veřejné metody"
+
+.in +1c
+.ti -1c
+.RI "\fBReservation\fP (std::vector< size_t > &seats, std::vector< int > &cost, \fBname\fP person, std::string password)"
+.br
+.ti -1c
+.RI "std::vector< int > & \fBGet_Cost\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBGet_Hash\fP () const"
+.br
+.ti -1c
+.RI "\fBname\fP & \fBGet_Person\fP ()"
+.br
+.ti -1c
+.RI "std::vector< size_t > & \fBGet_Seats\fP ()"
+.br
+.ti -1c
+.RI "bool \fBCheckPassword\fP (std::string passwd) const"
+.br
+.ti -1c
+.RI "std::string \fBto_string\fP ()"
+.br
+.in -1c
+.SH "Detailní popis"
+.PP 
+Trida reprezentujici rezervaci\&. 
+.PP
+Definice je uvedena na řádku 6 v souboru Reservation\&.h\&.
+.SH "Dokumentace konstruktoru a destruktoru"
+.PP 
+.SS "Reservation::Reservation (std::vector< size_t > & seats, std::vector< int > & cost, \fBname\fP person, std::string password)\fC [inline]\fP"
+Konstruktor, ktery dosadi sedadla, kontaktni udaje osoby, co si sedadla zabookovala a heslo\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIseats\fP Sedadla 
+.br
+\fIcost\fP Cena sedadel 
+.br
+\fIperson\fP Osoba 
+.br
+\fIpassword\fP Heslo potrebna k editaci/mazani rezervace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 14 v souboru Reservation\&.h\&.
+.SH "Dokumentace k metodám"
+.PP 
+.SS "bool Reservation::CheckPassword (std::string passwd) const\fC [inline]\fP"
+Provede Vytvoreni hashe z password a zkontroluje ho s hashem v Rezervaci 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIpasswd\fP Heslo 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Souhlasi, nebo ne 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 57 v souboru Reservation\&.h\&.
+.SS "std::vector<int>& Reservation::Get_Cost ()\fC [inline]\fP"
+Vrati vektor cen listku\&. 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Ceny sedadel 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 28 v souboru Reservation\&.h\&.
+.SS "size_t Reservation::Get_Hash () const\fC [inline]\fP"
+Vrati hash hesla 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Hash hesla 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 35 v souboru Reservation\&.h\&.
+.SS "\fBname\fP& Reservation::Get_Person ()\fC [inline]\fP"
+Vrati udaje o osobe, ktera provedla rezervaci 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Osobu 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 42 v souboru Reservation\&.h\&.
+.SS "std::vector<size_t>& Reservation::Get_Seats ()\fC [inline]\fP"
+Vrati sedadla, ktera jsou rezervovana 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Vraci sedadla 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 49 v souboru Reservation\&.h\&.
+.SS "std::string Reservation::to_string ()\fC [inline]\fP"
+Prevod rezervace na text bez hesla 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Textovou podobu rezervace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 67 v souboru Reservation\&.h\&.
+
+.SH "Autor"
+.PP 
+Generováno automaticky programem Doxygen ze zdrojových textů projektu Reservation system\&.

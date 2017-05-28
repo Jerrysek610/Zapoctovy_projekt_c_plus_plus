@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reservation system: Zdrojový soubor Reservation_system/ReservationSync.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Reservation system
+   &#160;<span id="projectnumber">1.0.0.1</span>
+   </div>
+   <div id="projectbrief">Managing of actions and their reservations</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generováno programem Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Hledat');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_reservation_sync_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ReservationSync.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Structures.h&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_reservation_sync.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_reservation_sync.html">ReservationSync</a></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_reservation_sync.html#a5043b115470aedaac222e9dd851efca6">   12</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_reservation_sync.html#a5043b115470aedaac222e9dd851efca6">ReservationSync</a>(std::string op,<a class="code" href="structname.html">name</a> p, std::string pswd):operation(op),hashed_password(pswd)</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        person.<a class="code" href="structname.html#a78ee69945afe23fd8262d426bdfb2219">firstName</a> = p.<a class="code" href="structname.html#a78ee69945afe23fd8262d426bdfb2219">firstName</a>;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        person.<a class="code" href="structname.html#a28fb7a7d2383d8fcc5aac23510e137b5">surName</a> = p.<a class="code" href="structname.html#a28fb7a7d2383d8fcc5aac23510e137b5">surName</a>;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        person.<a class="code" href="structname.html#a294b0fee400ef3282f4ccb54fdba8145">email</a> = p.<a class="code" href="structname.html#a294b0fee400ef3282f4ccb54fdba8145">email</a>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_reservation_sync.html#a17e030dcbf209fcf548947a3ba34775c">   21</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_reservation_sync.html#a17e030dcbf209fcf548947a3ba34775c">AddSeat</a>(<span class="keywordtype">size_t</span> add, <span class="keywordtype">int</span> c)</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        seats.push_back(add);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        cost.push_back(c);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_reservation_sync.html#abeb285cf9cbc96b58bb055b261c66e96">   29</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_reservation_sync.html#abeb285cf9cbc96b58bb055b261c66e96">AddSeats</a>(std::vector&lt;size_t&gt;&amp; adds, std::vector&lt;int&gt;&amp; costs)</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        seats.insert(seats.end(),adds.begin(), adds.end());</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        cost.insert(cost.end(), costs.begin(), costs.end());</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_reservation_sync.html#a3811cf0e2d0c3d34eed349c4d97d5639">   37</a></span>&#160;    <span class="keyword">inline</span> std::string <a class="code" href="class_reservation_sync.html#a3811cf0e2d0c3d34eed349c4d97d5639">GetOp</a>()<span class="keyword"> const</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">    </span>{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> operation;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_reservation_sync.html#a6beff6f7346eb7445e82dbde3d18ee35">   43</a></span>&#160;    <span class="keyword">inline</span> std::vector&lt;size_t&gt;&amp; <a class="code" href="class_reservation_sync.html#a6beff6f7346eb7445e82dbde3d18ee35">GetSeats</a>()</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> seats;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_reservation_sync.html#a2919b790725b9ecea060dde9d0bf41cb">   49</a></span>&#160;    <span class="keyword">inline</span> std::vector&lt;int&gt;&amp; <a class="code" href="class_reservation_sync.html#a2919b790725b9ecea060dde9d0bf41cb">GetCost</a>()</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> cost;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div><div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_reservation_sync.html#ac8007d295f9ea2a11a35f08abc2850e1">   55</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="structname.html">name</a> <a class="code" href="class_reservation_sync.html#ac8007d295f9ea2a11a35f08abc2850e1">GetPerson</a>()<span class="keyword"> const</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">    </span>{</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> person;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div><div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_reservation_sync.html#a5503fca318db20b91f68ad123240d9c9">   61</a></span>&#160;    <span class="keyword">inline</span> std::string <a class="code" href="class_reservation_sync.html#a5503fca318db20b91f68ad123240d9c9">GetPassword</a>()<span class="keyword"> const</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">    </span>{</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> hashed_password;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::string operation;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="structname.html">name</a> person;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::vector&lt;size_t&gt; seats;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::vector&lt;int&gt; cost;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::string hashed_password;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div><div class="ttc" id="structname_html_a294b0fee400ef3282f4ccb54fdba8145"><div class="ttname"><a href="structname.html#a294b0fee400ef3282f4ccb54fdba8145">name::email</a></div><div class="ttdeci">std::string email</div><div class="ttdoc">Email, na ktery je provedena rezervace. </div><div class="ttdef"><b>Definition:</b> <a href="_structures_8h_source.html#l00022">Structures.h:22</a></div></div>
+<div class="ttc" id="class_reservation_sync_html"><div class="ttname"><a href="class_reservation_sync.html">ReservationSync</a></div><div class="ttdoc">Trida slouzici k synchronizaci rezervaci. </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sync_8h_source.html#l00005">ReservationSync.h:5</a></div></div>
+<div class="ttc" id="structname_html_a78ee69945afe23fd8262d426bdfb2219"><div class="ttname"><a href="structname.html#a78ee69945afe23fd8262d426bdfb2219">name::firstName</a></div><div class="ttdeci">std::string firstName</div><div class="ttdoc">Krestni jmeno. </div><div class="ttdef"><b>Definition:</b> <a href="_structures_8h_source.html#l00018">Structures.h:18</a></div></div>
+<div class="ttc" id="class_reservation_sync_html_a5043b115470aedaac222e9dd851efca6"><div class="ttname"><a href="class_reservation_sync.html#a5043b115470aedaac222e9dd851efca6">ReservationSync::ReservationSync</a></div><div class="ttdeci">ReservationSync(std::string op, name p, std::string pswd)</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sync_8h_source.html#l00012">ReservationSync.h:12</a></div></div>
+<div class="ttc" id="class_reservation_sync_html_a17e030dcbf209fcf548947a3ba34775c"><div class="ttname"><a href="class_reservation_sync.html#a17e030dcbf209fcf548947a3ba34775c">ReservationSync::AddSeat</a></div><div class="ttdeci">void AddSeat(size_t add, int c)</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sync_8h_source.html#l00021">ReservationSync.h:21</a></div></div>
+<div class="ttc" id="class_reservation_sync_html_abeb285cf9cbc96b58bb055b261c66e96"><div class="ttname"><a href="class_reservation_sync.html#abeb285cf9cbc96b58bb055b261c66e96">ReservationSync::AddSeats</a></div><div class="ttdeci">void AddSeats(std::vector&lt; size_t &gt; &amp;adds, std::vector&lt; int &gt; &amp;costs)</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sync_8h_source.html#l00029">ReservationSync.h:29</a></div></div>
+<div class="ttc" id="class_reservation_sync_html_a2919b790725b9ecea060dde9d0bf41cb"><div class="ttname"><a href="class_reservation_sync.html#a2919b790725b9ecea060dde9d0bf41cb">ReservationSync::GetCost</a></div><div class="ttdeci">std::vector&lt; int &gt; &amp; GetCost()</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sync_8h_source.html#l00049">ReservationSync.h:49</a></div></div>
+<div class="ttc" id="class_reservation_sync_html_a5503fca318db20b91f68ad123240d9c9"><div class="ttname"><a href="class_reservation_sync.html#a5503fca318db20b91f68ad123240d9c9">ReservationSync::GetPassword</a></div><div class="ttdeci">std::string GetPassword() const</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sync_8h_source.html#l00061">ReservationSync.h:61</a></div></div>
+<div class="ttc" id="class_reservation_sync_html_ac8007d295f9ea2a11a35f08abc2850e1"><div class="ttname"><a href="class_reservation_sync.html#ac8007d295f9ea2a11a35f08abc2850e1">ReservationSync::GetPerson</a></div><div class="ttdeci">name GetPerson() const</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sync_8h_source.html#l00055">ReservationSync.h:55</a></div></div>
+<div class="ttc" id="structname_html_a28fb7a7d2383d8fcc5aac23510e137b5"><div class="ttname"><a href="structname.html#a28fb7a7d2383d8fcc5aac23510e137b5">name::surName</a></div><div class="ttdeci">std::string surName</div><div class="ttdoc">Prijmeni. </div><div class="ttdef"><b>Definition:</b> <a href="_structures_8h_source.html#l00020">Structures.h:20</a></div></div>
+<div class="ttc" id="class_reservation_sync_html_a6beff6f7346eb7445e82dbde3d18ee35"><div class="ttname"><a href="class_reservation_sync.html#a6beff6f7346eb7445e82dbde3d18ee35">ReservationSync::GetSeats</a></div><div class="ttdeci">std::vector&lt; size_t &gt; &amp; GetSeats()</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sync_8h_source.html#l00043">ReservationSync.h:43</a></div></div>
+<div class="ttc" id="structname_html"><div class="ttname"><a href="structname.html">name</a></div><div class="ttdoc">Struktura, definujici cloveka. </div><div class="ttdef"><b>Definition:</b> <a href="_structures_8h_source.html#l00015">Structures.h:15</a></div></div>
+<div class="ttc" id="class_reservation_sync_html_a3811cf0e2d0c3d34eed349c4d97d5639"><div class="ttname"><a href="class_reservation_sync.html#a3811cf0e2d0c3d34eed349c4d97d5639">ReservationSync::GetOp</a></div><div class="ttdeci">std::string GetOp() const</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sync_8h_source.html#l00037">ReservationSync.h:37</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_7536135a5dd2e715bc0ba30af6684bde.html">Reservation_system</a></li><li class="navelem"><b>ReservationSync.h</b></li>
+    <li class="footer">Generováno programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

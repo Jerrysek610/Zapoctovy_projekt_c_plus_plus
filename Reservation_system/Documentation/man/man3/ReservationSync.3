@@ -1,0 +1,148 @@
+.TH "ReservationSync" 3 "ne 28. kvě 2017" "Version 1.0.0.1" "Reservation system" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReservationSync \- Trida slouzici k synchronizaci rezervaci\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ReservationSync\&.h>\fP
+.SS "Veřejné metody"
+
+.in +1c
+.ti -1c
+.RI "\fBReservationSync\fP (std::string op, \fBname\fP p, std::string pswd)"
+.br
+.ti -1c
+.RI "void \fBAddSeat\fP (size_t add, int c)"
+.br
+.ti -1c
+.RI "void \fBAddSeats\fP (std::vector< size_t > &adds, std::vector< int > &costs)"
+.br
+.ti -1c
+.RI "std::string \fBGetOp\fP () const"
+.br
+.ti -1c
+.RI "std::vector< size_t > & \fBGetSeats\fP ()"
+.br
+.ti -1c
+.RI "std::vector< int > & \fBGetCost\fP ()"
+.br
+.ti -1c
+.RI "\fBname\fP \fBGetPerson\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBGetPassword\fP () const"
+.br
+.in -1c
+.SH "Detailní popis"
+.PP 
+Trida slouzici k synchronizaci rezervaci\&. 
+.PP
+Definice je uvedena na řádku 5 v souboru ReservationSync\&.h\&.
+.SH "Dokumentace konstruktoru a destruktoru"
+.PP 
+.SS "ReservationSync::ReservationSync (std::string op, \fBname\fP p, std::string pswd)\fC [inline]\fP"
+Konstruktor, co nam inicializuje polozky, ktere nejsou kontejner 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIop\fP Operace 
+.br
+\fIp\fP Osoba 
+.br
+\fIpswd\fP Heslo 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 12 v souboru ReservationSync\&.h\&.
+.SH "Dokumentace k metodám"
+.PP 
+.SS "void ReservationSync::AddSeat (size_t add, int c)\fC [inline]\fP"
+Pridani sedadla s cenou 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIadd\fP Sedadlo 
+.br
+\fIc\fP Cena 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 21 v souboru ReservationSync\&.h\&.
+.SS "void ReservationSync::AddSeats (std::vector< size_t > & adds, std::vector< int > & costs)\fC [inline]\fP"
+Pridani vice sedadel 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIadds\fP Sedadla 
+.br
+\fIcosts\fP Ceny 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 29 v souboru ReservationSync\&.h\&.
+.SS "std::vector<int>& ReservationSync::GetCost ()\fC [inline]\fP"
+Vraci ceny sedadel 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Vraci ceny 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 49 v souboru ReservationSync\&.h\&.
+.SS "std::string ReservationSync::GetOp () const\fC [inline]\fP"
+Vraci operaci 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Operaci 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 37 v souboru ReservationSync\&.h\&.
+.SS "std::string ReservationSync::GetPassword () const\fC [inline]\fP"
+Vrati hash hesla 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Hash hesla 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 61 v souboru ReservationSync\&.h\&.
+.SS "\fBname\fP ReservationSync::GetPerson () const\fC [inline]\fP"
+Vrati osobu, kera provedla rezervaci 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Osobu 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 55 v souboru ReservationSync\&.h\&.
+.SS "std::vector<size_t>& ReservationSync::GetSeats ()\fC [inline]\fP"
+Vraci sedadla 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Sedadla 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 43 v souboru ReservationSync\&.h\&.
+
+.SH "Autor"
+.PP 
+Generováno automaticky programem Doxygen ze zdrojových textů projektu Reservation system\&.

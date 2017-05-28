@@ -1,0 +1,56 @@
+.TH "name" 3 "ne 28. kvě 2017" "Version 1.0.0.1" "Reservation system" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+name \- Struktura, definujici cloveka\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Structures\&.h>\fP
+.SS "Veřejné metody"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBname\fP &other) const"
+.br
+.in -1c
+.SS "Veřejné atributy"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBfirstName\fP"
+.br
+.RI "Krestni jmeno\&. "
+.ti -1c
+.RI "std::string \fBsurName\fP"
+.br
+.RI "Prijmeni\&. "
+.ti -1c
+.RI "std::string \fBemail\fP"
+.br
+.RI "Email, na ktery je provedena rezervace\&. "
+.in -1c
+.SH "Detailní popis"
+.PP 
+Struktura, definujici cloveka\&. 
+.PP
+Definice je uvedena na řádku 15 v souboru Structures\&.h\&.
+.SH "Dokumentace k metodám"
+.PP 
+.SS "bool name::operator< (const \fBname\fP & other) const\fC [inline]\fP"
+Provadi porovnavani a zajistuje trideni v mape 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIother\fP Druhy clen k porovnavani 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 25 v souboru Structures\&.h\&.
+
+.SH "Autor"
+.PP 
+Generováno automaticky programem Doxygen ze zdrojových textů projektu Reservation system\&.

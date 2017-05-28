@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reservation system: Zdrojový soubor Reservation_system/SeatSync.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Reservation system
+   &#160;<span id="projectnumber">1.0.0.1</span>
+   </div>
+   <div id="projectbrief">Managing of actions and their reservations</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generováno programem Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Hledat');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_seat_sync_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SeatSync.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">class </span><a class="code" href="class_seat_sync.html">SeatSync</a></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_seat_sync.html#a8ea606ebb9ffa6aeb5faa828121d0172">    8</a></span>&#160;    <span class="keyword">explicit</span> <span class="keyword">inline</span> <a class="code" href="class_seat_sync.html#a8ea606ebb9ffa6aeb5faa828121d0172">SeatSync</a>(std::string op) : operation(op), position(0), size(0), cost(0), cena(0)</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    }</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_seat_sync.html#a412bacdc05d2d3aaa4695cac1f2a8f26">   16</a></span>&#160;    <span class="keyword">explicit</span> <span class="keyword">inline</span> <a class="code" href="class_seat_sync.html#a412bacdc05d2d3aaa4695cac1f2a8f26">SeatSync</a>(std::string op, <span class="keywordtype">size_t</span> position, <span class="keywordtype">size_t</span> size) : operation(op), position(position), size(size), cost(0), cena(0)</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_seat_sync.html#a04ad1b04608123880036c4e9e4c09697">   25</a></span>&#160;    <span class="keyword">explicit</span> <span class="keyword">inline</span> <a class="code" href="class_seat_sync.html#a04ad1b04608123880036c4e9e4c09697">SeatSync</a>(std::string op, <span class="keywordtype">size_t</span> position, <span class="keywordtype">size_t</span> size, <span class="keywordtype">int</span> cost) : operation(op), position(position), size(size), cost(cost), cena(0)</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_seat_sync.html#a2fa43c7bdd40e09401242111172860bb">   35</a></span>&#160;    <span class="keyword">explicit</span> <span class="keyword">inline</span> <a class="code" href="class_seat_sync.html#a2fa43c7bdd40e09401242111172860bb">SeatSync</a>(std::string op, <span class="keywordtype">size_t</span> position, <span class="keywordtype">size_t</span> size, <span class="keywordtype">int</span> cost, <span class="keywordtype">int</span> cena) : operation(op), position(position), size(size), cost(cost), cena(cena)</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_seat_sync.html#a27a21801f95d16442088660dfe1739a5">   41</a></span>&#160;    <span class="keyword">inline</span> std::string <a class="code" href="class_seat_sync.html#a27a21801f95d16442088660dfe1739a5">GetOp</a>()<span class="keyword"> const </span>{</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> operation;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_seat_sync.html#a39eff6c63539506bd3e4ba0ccfbeb808">   47</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="class_seat_sync.html#a39eff6c63539506bd3e4ba0ccfbeb808">GetPosition</a>()<span class="keyword"> const </span>{</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> position;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_seat_sync.html#a2ffe38b56001ed826f1268829793bfb7">   53</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="class_seat_sync.html#a2ffe38b56001ed826f1268829793bfb7">GetSize</a>()<span class="keyword"> const </span>{</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> size;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_seat_sync.html#a6854c47e6f19f3dfe77af7b6076b4a1e">   59</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="class_seat_sync.html#a6854c47e6f19f3dfe77af7b6076b4a1e">GetCost</a>()<span class="keyword"> const </span>{</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> cost;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_seat_sync.html#af8f8703aa20bb984936dab3d402055e2">   65</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="class_seat_sync.html#af8f8703aa20bb984936dab3d402055e2">GetCena</a>()<span class="keyword"> const</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">    </span>{</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> cena;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::string operation;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">size_t</span> position;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">size_t</span> size;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> cost;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">int</span> cena;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div><div class="ttc" id="class_seat_sync_html_a39eff6c63539506bd3e4ba0ccfbeb808"><div class="ttname"><a href="class_seat_sync.html#a39eff6c63539506bd3e4ba0ccfbeb808">SeatSync::GetPosition</a></div><div class="ttdeci">size_t GetPosition() const</div><div class="ttdef"><b>Definition:</b> <a href="_seat_sync_8h_source.html#l00047">SeatSync.h:47</a></div></div>
+<div class="ttc" id="class_seat_sync_html_a8ea606ebb9ffa6aeb5faa828121d0172"><div class="ttname"><a href="class_seat_sync.html#a8ea606ebb9ffa6aeb5faa828121d0172">SeatSync::SeatSync</a></div><div class="ttdeci">SeatSync(std::string op)</div><div class="ttdef"><b>Definition:</b> <a href="_seat_sync_8h_source.html#l00008">SeatSync.h:8</a></div></div>
+<div class="ttc" id="class_seat_sync_html_a412bacdc05d2d3aaa4695cac1f2a8f26"><div class="ttname"><a href="class_seat_sync.html#a412bacdc05d2d3aaa4695cac1f2a8f26">SeatSync::SeatSync</a></div><div class="ttdeci">SeatSync(std::string op, size_t position, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="_seat_sync_8h_source.html#l00016">SeatSync.h:16</a></div></div>
+<div class="ttc" id="class_seat_sync_html_af8f8703aa20bb984936dab3d402055e2"><div class="ttname"><a href="class_seat_sync.html#af8f8703aa20bb984936dab3d402055e2">SeatSync::GetCena</a></div><div class="ttdeci">int GetCena() const</div><div class="ttdef"><b>Definition:</b> <a href="_seat_sync_8h_source.html#l00065">SeatSync.h:65</a></div></div>
+<div class="ttc" id="class_seat_sync_html_a04ad1b04608123880036c4e9e4c09697"><div class="ttname"><a href="class_seat_sync.html#a04ad1b04608123880036c4e9e4c09697">SeatSync::SeatSync</a></div><div class="ttdeci">SeatSync(std::string op, size_t position, size_t size, int cost)</div><div class="ttdef"><b>Definition:</b> <a href="_seat_sync_8h_source.html#l00025">SeatSync.h:25</a></div></div>
+<div class="ttc" id="class_seat_sync_html_a2ffe38b56001ed826f1268829793bfb7"><div class="ttname"><a href="class_seat_sync.html#a2ffe38b56001ed826f1268829793bfb7">SeatSync::GetSize</a></div><div class="ttdeci">size_t GetSize() const</div><div class="ttdef"><b>Definition:</b> <a href="_seat_sync_8h_source.html#l00053">SeatSync.h:53</a></div></div>
+<div class="ttc" id="class_seat_sync_html_a27a21801f95d16442088660dfe1739a5"><div class="ttname"><a href="class_seat_sync.html#a27a21801f95d16442088660dfe1739a5">SeatSync::GetOp</a></div><div class="ttdeci">std::string GetOp() const</div><div class="ttdef"><b>Definition:</b> <a href="_seat_sync_8h_source.html#l00041">SeatSync.h:41</a></div></div>
+<div class="ttc" id="class_seat_sync_html"><div class="ttname"><a href="class_seat_sync.html">SeatSync</a></div><div class="ttdoc">Trida provadejici synchronizaci operaci s akcemi. </div><div class="ttdef"><b>Definition:</b> <a href="_seat_sync_8h_source.html#l00003">SeatSync.h:3</a></div></div>
+<div class="ttc" id="class_seat_sync_html_a6854c47e6f19f3dfe77af7b6076b4a1e"><div class="ttname"><a href="class_seat_sync.html#a6854c47e6f19f3dfe77af7b6076b4a1e">SeatSync::GetCost</a></div><div class="ttdeci">int GetCost() const</div><div class="ttdef"><b>Definition:</b> <a href="_seat_sync_8h_source.html#l00059">SeatSync.h:59</a></div></div>
+<div class="ttc" id="class_seat_sync_html_a2fa43c7bdd40e09401242111172860bb"><div class="ttname"><a href="class_seat_sync.html#a2fa43c7bdd40e09401242111172860bb">SeatSync::SeatSync</a></div><div class="ttdeci">SeatSync(std::string op, size_t position, size_t size, int cost, int cena)</div><div class="ttdef"><b>Definition:</b> <a href="_seat_sync_8h_source.html#l00035">SeatSync.h:35</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_7536135a5dd2e715bc0ba30af6684bde.html">Reservation_system</a></li><li class="navelem"><b>SeatSync.h</b></li>
+    <li class="footer">Generováno programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

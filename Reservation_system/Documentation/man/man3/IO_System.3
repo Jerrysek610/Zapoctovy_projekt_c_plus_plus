@@ -1,0 +1,135 @@
+.TH "IO_System" 3 "ne 28. kvě 2017" "Version 1.0.0.1" "Reservation system" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IO_System \- Trida, zabyvajici se serializaci jedne akce\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IO_System\&.h>\fP
+.SS "Veřejné metody"
+
+.in +1c
+.ti -1c
+.RI "\fBIO_System\fP (std::string filename, size_t n=5)"
+.br
+.ti -1c
+.RI "bool \fBWrite\fP (bool command)"
+.br
+.ti -1c
+.RI "bool \fBRead\fP (\fBBuilding\fP &action, std::string filename)"
+.br
+.ti -1c
+.RI "void \fBSerializeIO\fP (std::vector< \fBSeatSync\fP > &seat, std::vector< \fBReservationSync\fP > &reservation)"
+.br
+.ti -1c
+.RI "std::vector< \fBReservationSync\fP > & \fBGetNonSyncReservations\fP ()"
+.br
+.ti -1c
+.RI "std::vector< \fBSeatSync\fP > & \fBGetNonSyncSeats\fP ()"
+.br
+.in -1c
+.SH "Detailní popis"
+.PP 
+Trida, zabyvajici se serializaci jedne akce\&. 
+.PP
+Definice je uvedena na řádku 11 v souboru IO_System\&.h\&.
+.SH "Dokumentace konstruktoru a destruktoru"
+.PP 
+.SS "IO_System::IO_System (std::string filename, size_t n = \fC5\fP)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor, ktery si uloze jmeno souboru, vytvore/otevre podle toho soubor s rozvrzenem akce a soubor s rezervacemi akce 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIfilename\fP Nazev souboru 
+.br
+\fIn\fP Pocet operaci pro automaticke ulozeni 
+.RE
+.PP
+\fBVýjimky:\fP
+.RS 4
+\fI\fBbad_path\fP\fP Spatna cesta 
+.br
+\fI\fBnot_dir\fP\fP Chybejici slozka workingDIR 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 20 v souboru IO_System\&.h\&.
+.SH "Dokumentace k metodám"
+.PP 
+.SS "std::vector<\fBReservationSync\fP>& IO_System::GetNonSyncReservations ()\fC [inline]\fP"
+Vrate pocet aktualne zapsanych rezervaci v pameti, ktere jeste neprosli synchronizaci 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Odkaz na Nesynchronizovane rezervace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 62 v souboru IO_System\&.h\&.
+.SS "std::vector<\fBSeatSync\fP>& IO_System::GetNonSyncSeats ()\fC [inline]\fP"
+Vrati pocet aktualne zapsanych zmen v budove, ulozenych v pameti, ktere jeste neprosli synchronizaci 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Odkaz na nesychronizovane operace akce 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 68 v souboru IO_System\&.h\&.
+.SS "bool IO_System::Read (\fBBuilding\fP & action, std::string filename)"
+Precte serializovanou budovu az po platne oznacena data 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIaction\fP Akce 
+.br
+\fIfilename\fP Nazev akce 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Zda se povedlo cteni 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 425 v souboru IO_System\&.cpp\&.
+.SS "void IO_System::SerializeIO (std::vector< \fBSeatSync\fP > & seat, std::vector< \fBReservationSync\fP > & reservation)"
+Provedeme pocatecni serializaci, aby se soubor fileName\&.data dostal do inicializacneho stavu 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIseat\fP Neserializovane operace akce 
+.br
+\fIreservation\fP Neserializovane rezervace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 649 v souboru IO_System\&.cpp\&.
+.SS "bool IO_System::Write (bool command)"
+Provede zapsani, pokud je command true, jedna se o ulozeni uzivatelem, jinak se jedna o preventivni volani po kazde akci 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIcommand\fP Priznak pro zapis 
+.RE
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Povedl se zapis? 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 128 v souboru IO_System\&.cpp\&.
+
+.SH "Autor"
+.PP 
+Generováno automaticky programem Doxygen ze zdrojových textů projektu Reservation system\&.

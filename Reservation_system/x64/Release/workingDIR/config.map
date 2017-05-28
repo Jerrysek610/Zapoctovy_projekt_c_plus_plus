@@ -1,0 +1,145 @@
+Null
+load                                                                   Nacte ulozenou akci
+save                                                                   Ulozi akci v pameti
+create                                                                 Vytvori akci v pameti
+action                                                                 Zobrazi moznosti s akci
+exit								       Ukonci aplikaci
+ENDVALUES
+load
+name                                                                   Jmeno akce, kterou chceme nacist
+ENDVALUES
+save
+name                                                                   Jmeno akce, kterou chceme ulozit
+ENDVALUES
+create
+name                                                                   Jmeno akce, kterou chceme vytvorit
+ENDVALUES
+create arg1
+size                                                                   Velikost akce, kterou chceme vytvorit
+ENDVALUES
+create arg1 arg2
+cost                                                                   Cena za celou akci pro poradatele
+ENDVALUES
+action
+building                                                               Zobrazi moznosti budovy
+reservations                                                           Zobrazi moznosti
+ENDVALUES
+action building
+insert                                                                 Vlozime radek/sloupec
+remove                                                                 Smazeme radek/sloupec
+resize                                                                 Provedeme zadani nove maximalni velikosti (vetsi nez predesle)
+info								       Vypise informace o budove
+ENDVALUES
+action building resize
+name								       Jmeno akce, kterou budeme upravovat
+ENDVALUES
+action building info
+name								       Jmeno akce, kterou budeme vypisovat
+ENDVALUES
+action building resize arg1
+size                                                                   Nova maximalni velikost sedadel na akci
+ENDVALUES
+action building resize arg1 arg2
+cost								       Cena za celou akci
+ENDVALUES
+action building insert
+row                                                                    Zvolime vkladani radku
+column                                                                 Zvolime vkladani sloupce
+ENDVALUES
+action building insert row
+name                                                                   Jmeno akce, do ktere budeme radek vkladat
+ENDVALUES
+action building insert row arg1
+position                                                               Pozice, za kterou radek budeme vkladat (cislo od 0 do poctu radku)
+ENDVALUES
+action building insert row arg1 arg2
+size                                                                   Velikost radku, ktery vkladame
+ENDVALUES
+action building insert row arg1 arg2 arg3
+cost                                                                   Cena vkladanych mist
+ENDVALUES
+action building insert column
+name                                                                   Jmeno akce, do ktere budeme sloupec vkladat
+ENDVALUES
+action building insert column arg1
+position                                                               Pozice, za kterou sloupec budeme vkladat (cislo od 0 do poctu radku)
+ENDVALUES
+action building insert column arg1 arg2
+size                                                                   Velikost sloupce, ktery vkladame
+ENDVALUES
+action building insert column arg1 arg2 arg3
+cost                                                                   Cena sloupce, ktery vkladame
+ENDVALUES
+action building remove
+row                                                                    Zvolime smazani radku
+column                                                                 Zvolime smazani sloupce
+ENDVALUES
+action building remove row
+name                                                                   Jmeno akce, ve ktere budeme radek mazat
+ENDVALUES
+action building remove row arg1
+position                                                               Pozice, ve ktere radek budeme mazat (cislo od 1 do poctu radku)
+ENDVALUES
+action building remove row arg1 arg2
+size                                                                   Velikost mazanych dat
+ENDVALUES
+action building remove column
+name                                                                   Jmeno akce, ve ktere budeme sloupec mazat
+ENDVALUES
+action building remove column arg1
+position                                                               Pozice, ve ktere radek budeme mazat (cislo od 1 do poctu radku)
+ENDVALUES
+action building remove column arg1 arg2
+size                                                                   Velikost mazanych dat
+ENDVALUES
+action building resize
+name                                                                   Jmeno akce, kde zmenime maximalni pocet sedadel
+ENDVALUES
+action building resize arg1
+size                                                                   Nova maximalni velikost mist na akci
+ENDVALUES
+action reservations
+add                                                                    Pridani rezervace do akce
+alter                                                                  Provede editaci rezervace
+remove                                                                 Smazani rezervace v akci
+find                                                                   Nalezeni rezervace v akci
+ENDVALUES
+action reservations add
+name                                                                   Jmeno akce, kam rezervaci pridavame
+ENDVALUES
+action reservations add arg1
+seats                                                                  Sedadla ve tvaru: ([rada;sloupec;cena][rada;sloupec;cena]...)
+ENDVALUES
+action reservations add arg1 arg2
+person                                                                 Osoba, na kterou je rezervace delana ve tvaru: (Jmeno;Prijmeni;email)
+ENDVALUES
+action reservations add arg1 arg2 arg3
+password                                                               Heslo pro upravu rezervaci
+ENDVALUES
+action reservations alter
+name                                                                   Jmeno akce, kde rezervaci upravujeme
+ENDVALUES
+action reservations alter arg1
+seats                                                                  Sedadla ve tvaru: ([rada;sloupec;cena][rada;sloupec;cena]...)
+ENDVALUES
+action reservations alter arg1 arg2
+person                                                                 Osoba, na kterou je rezervace udelana ve tvaru: (Jmeno;Prijmeni;email)
+ENDVALUES
+action reservations alter arg1 arg2 arg3
+password                                                               Heslo pro upravu rezervace
+ENDVALUES
+action reservations remove
+name                                                                   Jmeno akce, kde rezervaci mazeme
+ENDVALUES
+action reservations remove arg1
+person                                                                 Osoba, ktera rezervaci objednavala ve tvaru: (Jmeno;Prijmeni;email)
+ENDVALUES
+action reservations remove arg1 arg2
+password                                                               Heslo potrebne pro uspesne smazani
+ENDVALUES
+action reservations find
+name                                                                   Jmeno akce, kde chceme rezervaci najit
+ENDVALUES
+action reservations find arg1
+person                                                                 Osoba, ktera si rezervaci udelala ve tvaru: ve tvaru: (Jmeno;Prijmeni;email)
+ENDVALUES

@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reservation system: Dokumentace třídy ReservationSync</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Reservation system
+   &#160;<span id="projectnumber">1.0.0.1</span>
+   </div>
+   <div id="projectbrief">Managing of actions and their reservations</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generováno programem Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Hledat');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_reservation_sync.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Veřejné metody</a> &#124;
+<a href="class_reservation_sync-members.html">Seznam všech členů</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentace třídy ReservationSync</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Trida slouzici k synchronizaci rezervaci.  
+ <a href="class_reservation_sync.html#details">...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Veřejné metody</h2></td></tr>
+<tr class="memitem:a5043b115470aedaac222e9dd851efca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reservation_sync.html#a5043b115470aedaac222e9dd851efca6">ReservationSync</a> (std::string op, <a class="el" href="structname.html">name</a> p, std::string pswd)</td></tr>
+<tr class="separator:a5043b115470aedaac222e9dd851efca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e030dcbf209fcf548947a3ba34775c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reservation_sync.html#a17e030dcbf209fcf548947a3ba34775c">AddSeat</a> (size_t add, int c)</td></tr>
+<tr class="separator:a17e030dcbf209fcf548947a3ba34775c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb285cf9cbc96b58bb055b261c66e96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reservation_sync.html#abeb285cf9cbc96b58bb055b261c66e96">AddSeats</a> (std::vector&lt; size_t &gt; &amp;adds, std::vector&lt; int &gt; &amp;costs)</td></tr>
+<tr class="separator:abeb285cf9cbc96b58bb055b261c66e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3811cf0e2d0c3d34eed349c4d97d5639"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reservation_sync.html#a3811cf0e2d0c3d34eed349c4d97d5639">GetOp</a> () const</td></tr>
+<tr class="separator:a3811cf0e2d0c3d34eed349c4d97d5639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6beff6f7346eb7445e82dbde3d18ee35"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reservation_sync.html#a6beff6f7346eb7445e82dbde3d18ee35">GetSeats</a> ()</td></tr>
+<tr class="separator:a6beff6f7346eb7445e82dbde3d18ee35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2919b790725b9ecea060dde9d0bf41cb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reservation_sync.html#a2919b790725b9ecea060dde9d0bf41cb">GetCost</a> ()</td></tr>
+<tr class="separator:a2919b790725b9ecea060dde9d0bf41cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8007d295f9ea2a11a35f08abc2850e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structname.html">name</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reservation_sync.html#ac8007d295f9ea2a11a35f08abc2850e1">GetPerson</a> () const</td></tr>
+<tr class="separator:ac8007d295f9ea2a11a35f08abc2850e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5503fca318db20b91f68ad123240d9c9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reservation_sync.html#a5503fca318db20b91f68ad123240d9c9">GetPassword</a> () const</td></tr>
+<tr class="separator:a5503fca318db20b91f68ad123240d9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailní popis</h2>
+<div class="textblock"><p>Trida slouzici k synchronizaci rezervaci. </p>
+
+<p class="definition">Definice je uvedena na řádku <a class="el" href="_reservation_sync_8h_source.html#l00005">5</a> v souboru <a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a>.</p>
+</div><h2 class="groupheader">Dokumentace konstruktoru a destruktoru</h2>
+<a id="a5043b115470aedaac222e9dd851efca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5043b115470aedaac222e9dd851efca6">&#9670;&nbsp;</a></span>ReservationSync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReservationSync::ReservationSync </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structname.html">name</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>pswd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Konstruktor, co nam inicializuje polozky, ktere nejsou kontejner </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">op</td><td>Operace </td></tr>
+    <tr><td class="paramname">p</td><td>Osoba </td></tr>
+    <tr><td class="paramname">pswd</td><td>Heslo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definice je uvedena na řádku <a class="el" href="_reservation_sync_8h_source.html#l00012">12</a> v souboru <a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentace k metodám</h2>
+<a id="a17e030dcbf209fcf548947a3ba34775c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e030dcbf209fcf548947a3ba34775c">&#9670;&nbsp;</a></span>AddSeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReservationSync::AddSeat </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>add</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pridani sedadla s cenou </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">add</td><td>Sedadlo </td></tr>
+    <tr><td class="paramname">c</td><td>Cena </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definice je uvedena na řádku <a class="el" href="_reservation_sync_8h_source.html#l00021">21</a> v souboru <a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a>.</p>
+
+</div>
+</div>
+<a id="abeb285cf9cbc96b58bb055b261c66e96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb285cf9cbc96b58bb055b261c66e96">&#9670;&nbsp;</a></span>AddSeats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReservationSync::AddSeats </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>adds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>costs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pridani vice sedadel </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adds</td><td>Sedadla </td></tr>
+    <tr><td class="paramname">costs</td><td>Ceny </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definice je uvedena na řádku <a class="el" href="_reservation_sync_8h_source.html#l00029">29</a> v souboru <a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a>.</p>
+
+</div>
+</div>
+<a id="a2919b790725b9ecea060dde9d0bf41cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2919b790725b9ecea060dde9d0bf41cb">&#9670;&nbsp;</a></span>GetCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt;&amp; ReservationSync::GetCost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vraci ceny sedadel </p><dl class="section return"><dt>Návratová hodnota</dt><dd>Vraci ceny </dd></dl>
+
+<p class="definition">Definice je uvedena na řádku <a class="el" href="_reservation_sync_8h_source.html#l00049">49</a> v souboru <a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a>.</p>
+
+</div>
+</div>
+<a id="a3811cf0e2d0c3d34eed349c4d97d5639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3811cf0e2d0c3d34eed349c4d97d5639">&#9670;&nbsp;</a></span>GetOp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ReservationSync::GetOp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vraci operaci </p><dl class="section return"><dt>Návratová hodnota</dt><dd>Operaci </dd></dl>
+
+<p class="definition">Definice je uvedena na řádku <a class="el" href="_reservation_sync_8h_source.html#l00037">37</a> v souboru <a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a>.</p>
+
+</div>
+</div>
+<a id="a5503fca318db20b91f68ad123240d9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5503fca318db20b91f68ad123240d9c9">&#9670;&nbsp;</a></span>GetPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ReservationSync::GetPassword </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vrati hash hesla </p><dl class="section return"><dt>Návratová hodnota</dt><dd>Hash hesla </dd></dl>
+
+<p class="definition">Definice je uvedena na řádku <a class="el" href="_reservation_sync_8h_source.html#l00061">61</a> v souboru <a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a>.</p>
+
+</div>
+</div>
+<a id="ac8007d295f9ea2a11a35f08abc2850e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8007d295f9ea2a11a35f08abc2850e1">&#9670;&nbsp;</a></span>GetPerson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structname.html">name</a> ReservationSync::GetPerson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vrati osobu, kera provedla rezervaci </p><dl class="section return"><dt>Návratová hodnota</dt><dd>Osobu </dd></dl>
+
+<p class="definition">Definice je uvedena na řádku <a class="el" href="_reservation_sync_8h_source.html#l00055">55</a> v souboru <a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a>.</p>
+
+</div>
+</div>
+<a id="a6beff6f7346eb7445e82dbde3d18ee35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6beff6f7346eb7445e82dbde3d18ee35">&#9670;&nbsp;</a></span>GetSeats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;size_t&gt;&amp; ReservationSync::GetSeats </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vraci sedadla </p><dl class="section return"><dt>Návratová hodnota</dt><dd>Sedadla </dd></dl>
+
+<p class="definition">Definice je uvedena na řádku <a class="el" href="_reservation_sync_8h_source.html#l00043">43</a> v souboru <a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla generována z následujícího souboru:<ul>
+<li>Reservation_system/<a class="el" href="_reservation_sync_8h_source.html">ReservationSync.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_reservation_sync.html">ReservationSync</a></li>
+    <li class="footer">Generováno programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

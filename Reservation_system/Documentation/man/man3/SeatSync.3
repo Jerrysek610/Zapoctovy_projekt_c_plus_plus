@@ -1,0 +1,172 @@
+.TH "SeatSync" 3 "ne 28. kvě 2017" "Version 1.0.0.1" "Reservation system" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SeatSync \- Trida provadejici synchronizaci operaci s akcemi\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SeatSync\&.h>\fP
+.SS "Veřejné metody"
+
+.in +1c
+.ti -1c
+.RI "\fBSeatSync\fP (std::string op)"
+.br
+.ti -1c
+.RI "\fBSeatSync\fP (std::string op, size_t position, size_t size)"
+.br
+.ti -1c
+.RI "\fBSeatSync\fP (std::string op, size_t position, size_t size, int cost)"
+.br
+.ti -1c
+.RI "\fBSeatSync\fP (std::string op, size_t position, size_t size, int cost, int cena)"
+.br
+.ti -1c
+.RI "std::string \fBGetOp\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBGetPosition\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBGetSize\fP () const"
+.br
+.ti -1c
+.RI "int \fBGetCost\fP () const"
+.br
+.ti -1c
+.RI "int \fBGetCena\fP () const"
+.br
+.in -1c
+.SH "Detailní popis"
+.PP 
+Trida provadejici synchronizaci operaci s akcemi\&. 
+.PP
+Definice je uvedena na řádku 3 v souboru SeatSync\&.h\&.
+.SH "Dokumentace konstruktoru a destruktoru"
+.PP 
+.SS "SeatSync::SeatSync (std::string op)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor, ktery inicializuje druh operace 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIop\fP Operace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 8 v souboru SeatSync\&.h\&.
+.SS "SeatSync::SeatSync (std::string op, size_t position, size_t size)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor, ktery inicializuje druh operace, pozici 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIop\fP Operace 
+.br
+\fIposition\fP Pozice pro operaci 
+.br
+\fIsize\fP Velikost 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 16 v souboru SeatSync\&.h\&.
+.SS "SeatSync::SeatSync (std::string op, size_t position, size_t size, int cost)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor, ktery inicializuje druh operace, pozici, velikost a cenu za sedadlo 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIop\fP Operace 
+.br
+\fIposition\fP Pozice pro operaci 
+.br
+\fIsize\fP Velikost 
+.br
+\fIcost\fP Cena sedadel 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 25 v souboru SeatSync\&.h\&.
+.SS "SeatSync::SeatSync (std::string op, size_t position, size_t size, int cost, int cena)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor, ktery inicializuje druh operace, pozici, velikost a cenu za sedadlo a celkovou cenu za akci 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIop\fP Operace 
+.br
+\fIposition\fP Pozice pro operaci 
+.br
+\fIsize\fP Velikost 
+.br
+\fIcost\fP Cena sedadel 
+.br
+\fIcena\fP Cena za celou akci 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 35 v souboru SeatSync\&.h\&.
+.SH "Dokumentace k metodám"
+.PP 
+.SS "int SeatSync::GetCena () const\fC [inline]\fP"
+Vraci celkovou cenu za akci 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Cena za akci 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 65 v souboru SeatSync\&.h\&.
+.SS "int SeatSync::GetCost () const\fC [inline]\fP"
+Vraci cenu vkladanych sedadel 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Cena 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 59 v souboru SeatSync\&.h\&.
+.SS "std::string SeatSync::GetOp () const\fC [inline]\fP"
+Vrati operaci 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Operace 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 41 v souboru SeatSync\&.h\&.
+.SS "size_t SeatSync::GetPosition () const\fC [inline]\fP"
+Vrati pozici, se kterou se provede operace 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Pozice 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 47 v souboru SeatSync\&.h\&.
+.SS "size_t SeatSync::GetSize () const\fC [inline]\fP"
+Vraci velikost, kterou vyuziva operace 
+.PP
+\fBNávratová hodnota:\fP
+.RS 4
+Velikost 
+.RE
+.PP
+
+.PP
+Definice je uvedena na řádku 53 v souboru SeatSync\&.h\&.
+
+.SH "Autor"
+.PP 
+Generováno automaticky programem Doxygen ze zdrojových textů projektu Reservation system\&.
